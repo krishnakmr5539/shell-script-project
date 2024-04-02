@@ -9,7 +9,8 @@ today_date=$(date '+%Y-%m%d')
 
 year=$(date '+%Y')
 
-date=$(date | awk '{ print $2 " " $3 }')
+# date=$(date | awk '{ print $2 "  " $3 }')
+date=$(date | awk '{ print $2}')
  
 rm -rf  /volume/CSdata/krikumar/Microsoft-automation/microsoft-case-list.txt 
  
