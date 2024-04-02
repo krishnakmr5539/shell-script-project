@@ -20,7 +20,7 @@ then
 
 else 
    date=$(date | awk '{ print $2 " " $3 }')
-
+fi
  
 rm -rf  /volume/CSdata/krikumar/Microsoft-automation/microsoft-case-list.txt 
  
