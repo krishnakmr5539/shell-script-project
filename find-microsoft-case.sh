@@ -11,10 +11,10 @@ year=$(date '+%Y')
 
 # date=$(date | awk '{ print $2 "  " $3 }')
 
-day_of_mon = $(date | awk '{print $3 }')
+day_of_mon=$(date | awk '{print $3 }')
 # date=$(date | awk '{ print $2}')
 
-if [ $day_of_mon < 10 ]   #checking if date is less the 10 the date formate is "Apr  2" else date formate is "Apr 10"
+if [ $day_of_mon -lt 10 ]   #checking if date is less the 10 the date formate is "Apr  2" else date formate is "Apr 10"
 then
    date=$(date | awk '{ print $2 "  " $3 }')
 
