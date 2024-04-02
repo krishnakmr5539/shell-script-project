@@ -14,13 +14,10 @@ date=$(date | awk '{ print $2}')
  
 rm -rf  /volume/CSdata/krikumar/Microsoft-automation/microsoft-case-list.txt 
  
- 
 ls -l /volume/case_$year | grep "$date" | grep -v "xfr\|meta"  > /volume/CSdata/krikumar/Microsoft-automation/today-modified-case-report.txt #finding all case modified today#
- 
  #Find the case numebr in case format#
 cat /volume/CSdata/krikumar/Microsoft-automation/today-modified-case-report.txt | awk '{print $9}' >  /volume/CSdata/krikumar/Microsoft-automation/case-list-formated.txt 
 
- 
 while read line;  #Find the Microsoft cases which conatain a pattern#
 do
 find /volume/case_$year/$line -name "*$line_logs_generic.logs" 2>/dev/null  | awk -F'/' '{print $4}'  >>  /volume/CSdata/krikumar/Microsoft-automation/microsoft-case-list.txt
